@@ -18,7 +18,7 @@ public class MessageConsumer {
     public void messageListener(SystemMessage systemMessage) {
         LOGGER.info("Message received! {}", systemMessage);
     }
-    //@JmsListener(destination = "published-hours")
+    @JmsListener(destination = "published-hours")
     public void messageListener(String trainerPayload) throws JsonProcessingException {
 
         ObjectMapper mapper = new ObjectMapper();
